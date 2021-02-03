@@ -2,6 +2,12 @@
 
 class Rook 
 {
+     public function __construct ($color,$square){
+     
+          $this -> color = $color ;
+          $this -> square = $square ;
+     
+     }
 
      public $isonboard = true ;
      public $color ;
@@ -17,18 +23,18 @@ class Rook
 // $rook1 -> color = 'white' ;
 // $rook1 -> square = 'h1' ;
 
-function rookMaker($color,$square){
+// function rookMaker($color,$square){
      
-     $rook = new Rook() ; 
-     $rook -> color = $color ;
-     $rook -> square = $square ;
+//      $rook = new Rook() ; 
+//      $rook -> color = $color ;
+//      $rook -> square = $square ;
 
-     return $rook;
-}
+//      return $rook;
+// }
 
-$rook1 = rookMaker('white','h1') ;
-$rook2 = rookMaker('white', 'h8') ;
-$rook3 = rookMaker('black', 'a1') ;
-$rook4 = rookMaker('black', 'a8') ;
+$rook1 = new Rook('white','h1') ;
+$rook2 = new Rook('white', 'h8') ;
+$rook3 = new Rook('black', 'a1') ;
+$rook4 = new Rook('black', 'a8') ;
 
-echo $rook3 -> color ;
+echo $rook2 -> color ;
