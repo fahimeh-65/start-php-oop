@@ -22,16 +22,18 @@ class Rook
      // }
      static function makeWhite( $square ){
 
-          $rook = new Rook() ; 
-          $rook -> color ='white' ;
-          $rook -> square = $square ;
-          return $rook;
+          return Rook :: make('white',$square) ; 
 
      }
      static function makeBlack( $square ){
 
+         return Rook :: make('black',$square) ; 
+
+     }
+     static function make( $color,$square ) : Rook{
+
           $rook = new Rook() ; 
-          $rook -> color = 'black' ;
+          $rook -> color = $color ;
           $rook -> square = $square ;
           return $rook;
 
