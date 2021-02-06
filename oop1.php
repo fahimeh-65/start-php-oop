@@ -20,22 +20,36 @@ class Rook
      //      return $rook;
 
      // }
-     static function makeWhite( $square ){
+     static function makeWhite( $square ): self{
 
-          return Rook :: make('white',$square) ; 
-
-     }
-     static function makeBlack( $square ){
-
-         return Rook :: make('black',$square) ; 
+          return self :: make('white',$square) ; 
 
      }
-     static function make( $color,$square ) : Rook{
+     static function makeBlack( $square ) :self{
 
-          $rook = new Rook() ; 
+         return self :: make('black',$square) ; 
+
+     }
+     static function make( $color,$square ) : self{
+
+          $rook = new static() ; 
           $rook -> color = $color ;
           $rook -> square = $square ;
           return $rook;
+
+     }
+     // public function getColor()
+     // {
+     //      return $this -> color ;
+     // }
+     public function isBlack(){
+
+          return $this -> color === 'black' ; 
+
+     }
+     public function isWlack(){
+
+          return $this -> color === 'white' ; 
 
      }
 
