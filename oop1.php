@@ -2,23 +2,43 @@
 
 class Rook 
 {
+     private function __construct(){
+
+     }
+     
      // public function __construct ($color,$square){
      
      //      $this -> color = $color ;
      //      $this -> square = $square ;
      
      // }
-     static function rookMaker( $color,$square ){
+     // static function rookMaker( $color,$square ){
+
+     //      $rook = new Rook() ; 
+     //      $rook -> color = $color ;
+     //      $rook -> square = $square ;
+     //      return $rook;
+
+     // }
+     static function makeWhite( $square ){
 
           $rook = new Rook() ; 
-          $rook -> color = $color ;
+          $rook -> color ='white' ;
+          $rook -> square = $square ;
+          return $rook;
+
+     }
+     static function makeBlack( $square ){
+
+          $rook = new Rook() ; 
+          $rook -> color = 'black' ;
           $rook -> square = $square ;
           return $rook;
 
      }
 
      public $isonboard = true ;
-     public $color ;
+     private $color ;
      public $square ;
 
 }
@@ -47,7 +67,12 @@ class Rook
 
 // echo $rook2 -> color ;
 //-----------------------------------------------------------------------------
-$rook1 = Rook::rookMaker('white','h1') ;
-$rook1 = Rook::rookMaker('white','a1') ;
-$rook1 = Rook::rookMaker('black','h8') ;
-$rook1 = Rook::rookMaker('black','a1') ;
+// $rook1 = Rook::rookMaker('white','h1') ;
+// $rook1 = Rook::rookMaker('white','a1') ;
+// $rook1 = Rook::rookMaker('black','h8') ;
+// $rook1 = Rook::rookMaker('black','a1') ;
+//-----------------------------------------------------------------------------
+$rook1 = Rook :: makeWhite('h1') ; 
+$rook1 = Rook :: makeWhite('a1') ; 
+$rook1 = Rook :: makeBlack('h8') ; 
+$rook1 = Rook :: makeBlack('a1') ; 
