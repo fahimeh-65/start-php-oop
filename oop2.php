@@ -3,6 +3,13 @@
 class A
 {
     //public static $foo = 'iman' ;
+    public function hello($b){
+
+        // self :: $foo  ;
+        //echo 'hello' ;
+        $b -> echoFoo() ;
+        $b -> foo += 2 ;
+    }
 
 }
 
@@ -14,13 +21,7 @@ class B
     {
         echo $this -> foo ;
     }
-    public function hello(){
-
-        // self :: $foo  ;
-        //echo 'hello' ;
-        $this -> echoFoo() ;
-        $this -> foo += 2 ;
-    }
+    
    
 }
 
@@ -32,8 +33,16 @@ class B
 
 // echo $a -> foo;
 // echo $a2 -> foo;
+//-----------------------------------------------------------------------------
+// $b = new B() ;
+// $b -> hello() ;
+// echo $b -> foo ;
+//-----------------------------------------------------------------------------
+$a = new A() ;
 $b = new B() ;
-$b -> hello() ;
-echo $b -> foo ;
+
+$a -> hello($b) ;
+$a -> hello($b) ;
+$a -> hello($b) ;
 
 
