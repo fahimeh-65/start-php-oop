@@ -8,13 +8,20 @@ class A
 
 class B
 {
+    
     public $foo = 12 ;
+    public function echoFoo()
+    {
+        echo $this -> foo ;
+    }
     public function hello(){
 
         // self :: $foo  ;
         //echo 'hello' ;
+        $this -> echoFoo() ;
         $this -> foo += 2 ;
     }
+   
 }
 
 // $a = new A() ;
