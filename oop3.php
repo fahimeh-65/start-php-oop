@@ -1,8 +1,10 @@
 <?php
+
+interface Gun {
+    public function fire() ;
+}
 class soldier{
-    // interface Gun {
-    //     public function fire() ;
-    // }
+    
     private $gun ;
     public function __construct(Gun $gun) 
     {
@@ -13,20 +15,26 @@ class soldier{
     public function attack()
     {
         $this ->gun -> fire() ;
-        $this ->gun -> kill += 1 ;
+        
     }
 
 }
-class Gun{
+class m4 implements Gun{
 
-    public $kill = 12 ;
     public function fire(){
-        echo $this -> kill ;
+        echo 'kioooo---->' ;
     }
 }
-$b = new Gun() ;
-$a = new soldier( $b ) ;
-$a -> attack() ;
-$a -> attack() ;
-$a -> attack() ;
+class j3 implements Gun{
+
+    public function fire(){
+        echo 'dooff---->>' ;
+    }
+}
+$m4 = new m4() ;
+$j3 = new j3 ;
+$s1 = new soldier( $j3 ) ;
+$s2 = new soldier( $m4 ) ;
+$s1 -> attack() ;
+$s2 -> attack() ;
 
