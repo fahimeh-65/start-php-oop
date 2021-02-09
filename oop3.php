@@ -9,8 +9,12 @@ class soldier{
     public function __construct(Gun $gun) 
     {
 
-        $this->gun = $gun ;
+        $this->changeGun( $gun) ;
         
+    }
+    public function changeGun( Gun $gun ){
+
+        $this->gun = $gun ;
     }
     public function attack()
     {
@@ -34,7 +38,10 @@ class j3 implements Gun{
 $m4 = new m4() ;
 $j3 = new j3 ;
 $s1 = new soldier( $j3 ) ;
-$s2 = new soldier( $m4 ) ;
+//$s2 = new soldier( $m4 ) ;
 $s1 -> attack() ;
-$s2 -> attack() ;
+$s1 -> attack() ;
+$s1 -> changeGun($m4) ;
+$s1 -> attack() ;
+$s1 -> attack() ;
 
