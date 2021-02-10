@@ -24,15 +24,15 @@ class soldier{
 
 }
 class m4 implements Gun{
-
+    private $sound = 'kioooo---->' ;
     public function fire(){
-        echo 'kioooo---->' ;
+        echo $this  ->sound ;
     }
 }
 class j3 implements Gun{
-
+    private $sound ='dooff---->>' ;
     public function fire(){
-        echo 'dooff---->>' ;
+        echo $this  ->sound ;
     }
 }
 $m4 = new m4() ;
