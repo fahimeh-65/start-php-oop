@@ -3,8 +3,16 @@
 interface Gun {
     public function fire() ;
 }
-class Firer {
+abstract class Firer {
+    //abstract public function abc();
     public function fire(){
+        echo $this  ->sound ;
+    }
+
+}
+trait Mirer {
+    //abstract public function abc();
+    public function mire(){
         echo $this  ->sound ;
     }
 
@@ -35,6 +43,7 @@ class m4 extends Firer implements Gun{
    
 }
 class j3 extends Firer implements Gun{
+    use Mirer ;
     protected $sound ='dooff---->>' ;
    
 }
