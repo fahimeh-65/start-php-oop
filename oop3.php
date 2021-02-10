@@ -3,6 +3,12 @@
 interface Gun {
     public function fire() ;
 }
+class Firer {
+    public function fire(){
+        echo $this  ->sound ;
+    }
+
+}
 class soldier{
     
     private $gun ;
@@ -23,17 +29,14 @@ class soldier{
     }
 
 }
-class m4 implements Gun{
-    private $sound = 'kioooo---->' ;
-    public function fire(){
-        echo $this  ->sound ;
-    }
+class m4 extends Firer implements Gun{
+    protected $sound = 'kioooo---->' ;
+    
+   
 }
-class j3 implements Gun{
-    private $sound ='dooff---->>' ;
-    public function fire(){
-        echo $this  ->sound ;
-    }
+class j3 extends Firer implements Gun{
+    protected $sound ='dooff---->>' ;
+   
 }
 $m4 = new m4() ;
 $j3 = new j3 ;
